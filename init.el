@@ -53,6 +53,7 @@ values."
      org
      osx
      python
+     search-engine
      (shell :variables
             shell-default-shell 'multi-term
             shell-default-height 30
@@ -66,6 +67,7 @@ values."
      (version-control :variables
                       version-control-diff-tool 'git-gutter+
                       version-control-global-margin t)
+     vim-powerline
      waldon
      )
    ;; List of additional packages that will be installed without being
@@ -145,13 +147,14 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
-                         spacemacs-light
-                         solarized-light
-                         solarized-dark
-                         leuven
-                         monokai
-                         zenburn)
+   dotspacemacs-themes '(zenburn
+                         spacemacs-dark
+                         ;; solarized-dark
+                         ;; monokai
+                         ;; spacemacs-light
+                         ;; solarized-light
+                         ;; leuven
+                         )
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
