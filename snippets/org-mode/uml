@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: uml
+# key: uml_
+# --
+#+BEGIN_SRC plantuml :file ${1:export-file-name} :export results :cmdline -charset UTF-8
+title $0
+#+END_SRC

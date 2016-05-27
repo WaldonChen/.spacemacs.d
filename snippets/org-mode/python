@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: python
+# key: python_
+# --
+#+BEGIN_SRC python :results ${1:output} :export ${2:results}
+$0
+#+END_SRC

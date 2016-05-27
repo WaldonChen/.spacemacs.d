@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: octave
+# key: octave_
+# --
+#+BEGIN_SRC octave :results ${1:output} :exports ${2:both}
+$0
+#+END_SRC
