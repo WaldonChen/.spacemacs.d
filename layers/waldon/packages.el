@@ -34,6 +34,7 @@
     (org :location built-in)
     (dired-mode :location built-in)
     flyspell-correct
+    google-c-style
     (whitespace :location built-in)
     yasnippet
     )
@@ -460,4 +461,19 @@ open and unsaved."
     (spacemacs/add-to-hooks 'waldon/load-yasnippet '(prog-mode-hook
                                                      org-mode-hook
                                                      markdown-mode-hook))))
+
+(defun waldon/init-google-c-style ()
+  (use-package google-c-style
+    :init
+    (progn
+      (c-add-style "Google" google-c-style nil)
+
+      (defun waldon/set-c-style ()
+        (interactive)
+        (make-local-variable 'c-tab-always-indent)
+        (setq c-tab-always-indent t)
+        (c-add-style "Waldon" '("Google" (c-special-indent-hook)) t))
+
+      (add-hook 'c-mode-common-hook 'waldon/set-c-style))))
+
 ;;; packages.el ends here

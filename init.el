@@ -321,14 +321,6 @@ you should place your code here."
     (when (and (spacemacs/system-is-mac) window-system)
       (spacemacs//set-monospaced-font "Source Code Pro" "Hiragino Sans GB" 14 16)))
 
-  (setq-default powerline-default-separator 'arrow)
-
-  (defadvice find-file (before make-directory-maybe (filename &optional wildcards) activate)
-    "Create parent directory if not exists while visiting file."
-    (unless (file-exists-p filename)
-      (let ((dir (file-name-directory filename)))
-        (unless (file-exists-p dir)
-          (make-directory dir t)))))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
